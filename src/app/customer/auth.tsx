@@ -9,6 +9,7 @@ import PhoneInput from '@/components/shared/PhoneInput'
 import CustomButton from '@/components/shared/CustomButton'
 import { signin } from '@/service/authService'
 import { useWS } from '@/service/WSProvider'
+import { router } from 'expo-router'
 
 
 const Auth = () => {
@@ -56,6 +57,7 @@ const Auth = () => {
                 </CustomText>
                 <CustomButton
                     title='Next'
+                    // onPress={() => router.navigate('/customer/home')}
                     onPress={handleNext}
                     loading={false}
                     disabled={false}

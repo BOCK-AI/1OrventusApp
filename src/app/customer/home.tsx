@@ -22,7 +22,7 @@ const Home = () => {
     const handleSheetChanges =useCallback((index:number) => {
         let height = screenHeight * 0.8
         if(index === 1){
-            height = screenHeight * 0.5
+            height =  screenHeight * 0.57
         }
         setMapHeight(height)
     }, [])

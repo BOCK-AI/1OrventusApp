@@ -17,13 +17,13 @@
       "supportsTablet": true,
       "bundleIdentifier": "com.chiru6.Orventus",
       "config": {
-                "googleMapsApiKey": "YOUR_GOOGLE_MAP_API_KEY"
+                "googleMapsApiKey": "AIzaSyCa52kVGVTJZ9njABHppfcwmig_oTwS7cc"
             }
     },
     "android": {
       "config": {
                 "googleMaps": {
-                    "apiKey": "YOUR_GOOGLE_MAP_API_KEY"
+                    "apiKey": "AIzaSyCa52kVGVTJZ9njABHppfcwmig_oTwS7cc"
                 }
             },
       "adaptiveIcon": {

@@ -25,7 +25,7 @@ const SheetContent = () =>{
 
         <View style={commonStyles.flexRowBetween}>
             <CustomText fontFamily='Medium' fontSize={11}>
-                Explore
+                Explore 
             </CustomText>
 
             <TouchableOpacity style={commonStyles.flexRow}>
@@ -38,7 +38,7 @@ const SheetContent = () =>{
 
         <View style={uiStyles.cubes}>
             {cubes?.slice(0, 4).map((item, index) => (
-                <TouchableOpacity key={index} style={uiStyles.container} onPress={()=> router.navigate('/customer/selectlocations')}>
+                <TouchableOpacity  style={uiStyles.cubeContainer} key={index} onPress={()=> router.navigate('/customer/selectlocations')}>
                     <View style={uiStyles.cubeIconContainer}>
                         <Image source={item?.imageUri} style={uiStyles.cubeIcon} />
                     </View>
@@ -54,7 +54,7 @@ const SheetContent = () =>{
             <Image source={require('@/assets/images/ad_banner.jpeg')} style={uiStyles.adImage} />
         </View>
         <View style={uiStyles.bannerContainer}>
-            <Image source={require('@/assets/images/icon.png')} style={uiStyles.bannerContainer} />
+            <Image source={require('@/assets/icons/footer.jpeg')} style={uiStyles.banner} />
         </View>
     
     </View>
