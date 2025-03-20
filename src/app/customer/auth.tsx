@@ -57,8 +57,8 @@ const Auth = () => {
                 </CustomText>
                 <CustomButton
                     title='Next'
-                    onPress={() => router.navigate('/customer/home')}
-                    // onPress={handleNext}
+                    // onPress={() => router.navigate('/customer/home')}
+                    onPress={handleNext}
                     loading={false}
                     disabled={false}
                 />
