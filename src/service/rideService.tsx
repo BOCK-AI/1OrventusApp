@@ -35,7 +35,7 @@ export const getMyRides = async (isCustomer: boolean = true) => {
         );
         if (filterRides?.length > 0) {
             router?.navigate({
-                pathname: isCustomer ? "/customer/liveride" : "/captain/liveride",
+                pathname: isCustomer ? "/customer/liveride" : "/rider/liveride",
                 params: {
                     id: filterRides![0]?._id,
                 },
@@ -51,7 +51,7 @@ export const acceptRideOffer = async (rideId: string) => {
     try {
         const res = await appAxios.patch(`/ride/accept/${rideId}`);
         resetAndNavigate({
-            pathname: "/captain/liveride",
+            pathname: "/rider/liveride",
             params: { id: rideId },
         });
 

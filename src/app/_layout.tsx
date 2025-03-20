@@ -16,6 +16,8 @@ import { WSProvider } from '@/service/WSProvider';
                 <Stack.Screen name='rider/home' />
                 <Stack.Screen name='customer/selectlocations' />
                 <Stack.Screen name='customer/ridebooking' />
+                <Stack.Screen name='customer/liveride' />
+                <Stack.Screen name='rider/liveride' />
 
             </Stack>
                </WSProvider>
