@@ -7,6 +7,7 @@ import { screenHeight } from '@/utils/Constants'
 import DraggableMap from '@/components/customer/DraggableMap'
 import BottomSheet, { BottomSheetScrollView } from '@gorhom/bottom-sheet'
 import SheetContent from '@/components/customer/SheetContent'
+import BottomNavBar from '@/components/customer/BottomNavBar'
 import { getMyRides } from '@/service/rideService'
 
 const androidHeights = [screenHeight * 0.12, screenHeight * 0.42,]
@@ -39,31 +40,32 @@ const Home = () => {
                 backgroundColor='orange'
                 translucent={false}
             />
-            <LocationBar
-
-            />
+            <LocationBar />
 
             <DraggableMap height={mapHeight} />
 
             <BottomSheet
-            ref={bottomSheetRef}
-            index={1}
-            handleIndicatorStyle={{backgroundColor: '#ccc'}}
-            enableOverDrag={false}
-            enableDynamicSizing
-            style={{ zIndex: 4 }}
-            snapPoints={snapPoints}
-            onChange={handleSheetChanges}
-
+                ref={bottomSheetRef}
+                index={1}
+                handleIndicatorStyle={{backgroundColor: '#ccc'}}
+                enableOverDrag={false}
+                enableDynamicSizing
+                style={{ zIndex: 4 }}
+                snapPoints={snapPoints}
+                onChange={handleSheetChanges}
             >
-            
-            <BottomSheetScrollView contentContainerStyle={homeStyles.scrollContainer}>
-                <SheetContent />
-
-            </BottomSheetScrollView>
-
+                <BottomSheetScrollView 
+                    contentContainerStyle={[
+                        homeStyles.scrollContainer,
+                        { paddingBottom: 70 } // Add padding for the bottom nav bar
+                    ]}
+                >
+                    <SheetContent />
+                </BottomSheetScrollView>
+                
+                {/* Bottom Navigation Bar */}
+                <BottomNavBar />
             </BottomSheet>
-
         </View>
     )
 }
